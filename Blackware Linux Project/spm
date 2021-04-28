@@ -1,0 +1,103 @@
+#!/bin/bash
+
+# Variablen für die Farben
+
+black=$(echo -e '\e[30m')
+red=$(echo -e '\e[31m')
+green=$(echo -e '\e[32m')
+brown=$(echo -e '\e[33m')
+blue=$(echo -e '\e[34m')
+purple=$(echo -e '\e[35m')
+cyan=$(echo -e '\033[1m\e[36m')
+yellow=$(echo -e '\e[1;33m')
+white=$(echo -e '\e[1;37m')
+dark_gray=$(echo -e '\e[1;30m')
+light_red=$(echo -e '\e[1;31m')
+light_green=$(echo -e '\e[1;32m')
+light_blue=$(echo -e '\e[1;34m')
+light_purple=$(echo -e '\e[1;35m')
+light_cyan=$(echo -e '\e[1;36m')
+light_gray=$(echo -e '\e[37m')
+orange=$(echo -e '\e[38;5;202m')
+light_orange=$(echo -e '\e[38;5;214m')
+bold=$(echo -e '\033[1m')
+reset=$(echo -e '\033(B\033[m')
+unterstrich=$(echo -e '\033[4m')
+
+if [[ $1 = -i ]]
+then
+    echo -e "Checking Repositorys..."
+    sleep 0.7
+    sudo apt install $2
+    sleep 0.2
+    echo -e "Package ${2} was successfullied installed"
+
+else
+if [[ $1 = -r ]]
+then
+    echo -e "Removing Package ${2}"
+    sleep 0.7
+    sudo apt remove $2
+    sleep 0.2
+    echo -e "Package ${2} was successfullied removed"
+
+else
+if [[ $1 = -u ]]
+then
+    echo -e "Checking for Updates..."
+    sleep 0.7
+    sudo apt update
+    sleep 0.2
+
+else
+if [[ $1 = -ug ]]
+then
+    echo -e "Checking for Updates..."
+    sleep 1
+    sudo apt upgrade
+
+else
+if [[ $1 = -l ]]
+then
+    echo -e "Listing all packages... This can take time"
+    sleep 2.7
+    apt list
+
+else
+if [[ $1 = -ar ]]
+then
+    echo -e "Removing all unused Packages now..."
+    sleep 0.7
+    sudo apt autoremove
+
+
+else
+if [[ $1 = -h ]]
+then
+    echo -e "${red}Usage of spm - The Simple Package Manager - Based on apt${reset}"
+    echo -e "********************************************************"
+    sleep 0.01
+    echo -e "spm -i <Package>: Installs a package"
+    echo -e "spm -r <Package>: Removes a package"
+    echo -e "spm -u: Searching for avaible Updates"
+    echo -e "spm -ug: Upgrades Packages if there are avaible updates"
+    echo -e "spm -l: Listing all avaible Packages"
+    echo -e "spm -ar: Remove automatically all unused Packages"
+    echo -e ""
+    echo -e "${bold}${unterstrich}On which platform is spm supported?${reset}"
+    echo -e "spm is currently only supported by Blackware Linux."
+    echo -e "${green}Support for LinuxGuidesOS is planned for the near future.${reset}"
+    echo -e "${red}Attention! ${reset}Attempting to install spm on a non-apt-based distro will ${bold}fail${reset}, and may ${red}potentially damage${reset} your system. We do ${bod}not accept any liability for this."
+    echo -e ""
+    echo -e "spm Version 1.0.1 Beta Release for Blackware Linux Enterprise"
+
+else
+    echo -e "\033[31mERROR:\033[0m Invalid option '${1}'"
+    echo -e "Use spm -h for more Informations"
+fi
+fi
+fi
+fi
+fi
+fi
+fi
