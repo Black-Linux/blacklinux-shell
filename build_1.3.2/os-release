@@ -1,0 +1,12 @@
+NAME="Blackware Linux"
+VERSION="1.3.2 LTS"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Blackware Linux 1.3.2 LTS"
+VERSION_ID="1.3.2"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
