@@ -758,7 +758,7 @@ image_source="auto"
 # NOTE: AIX, Alpine, Anarchy, Android, Antergos, antiX, AOSC,
 #       Apricity, ArcoLinux, ArchBox, ARCHlabs, ArchStrike,
 #       XFerience, ArchMerge, Arch, Artix, Arya, Bedrock, Bitrig,
-#       BlackArch, Blackware, BlackLinux BLAG, BlankOn, BlueLight, bonsai, BSD,
+#       BlackArch, Blackware, Blacklinux BLAG, BlankOn, BlueLight, bonsai, BSD,
 #       BunsenLabs, Calculate, Carbs, CentOS, Chakra, ChaletOS,
 #       Chapeau, Chrom*, Cleanjaro, ClearOS, Clear_Linux, Clover,
 #       Condres, Container_Linux, CRUX, Cucumber, Debian, Deepin,
@@ -4817,7 +4817,7 @@ ASCII:
                                 NOTE: AIX, Alpine, Anarchy, Android, Antergos, antiX, AOSC,
                                 Apricity, ArcoLinux, ArchBox, ARCHlabs, ArchStrike,
                                 XFerience, ArchMerge, Arch, Artix, Arya, Bedrock, Bitrig,
-                                BlackArch, Blackware, BlackLinux, BlackwareLinux BLAG, BlankOn, BlueLight, bonsai, BSD,
+                                BlackArch, Blackware, Blacklinux, BlackwareLinux BLAG, BlankOn, BlueLight, bonsai, BSD,
                                 BunsenLabs, Calculate, Carbs, CentOS, Chakra, ChaletOS,
                                 Chapeau, Chrom, Cleanjaro, ClearOS,LinuxGuides, LinuxGuidesOS, Clear_Linux, Clover,
                                 Condres, Container_Linux, CRUX, Cucumber, Debian, Deepin, Prombel,
@@ -5842,10 +5842,10 @@ ${c2} ____  __      __    ___  _  _
 ${c2}(  _ \(  )    /__\  / __)( )/ )
 ${c1} ) _ < )(__  /(__)\( (__  )  (  
 ${c2}(____/(____)(__)(__)\___)(_)\_)
-${c2} _    _    __    ____  ____ 
-${c2}( \/\/ )  /__\  (  _ \( ___)
-${c1} )    (  /(__)\  )   / )__) 
-${c2}(__/\__)(__)(__)(_)\_)(____)
+${c2} __    ____  _  _  __  __  _  _ 
+${c2}(  )  (_  _)( \( )(  )(  )( \/ )
+${c1} )(__  _)(_  )  (  )(__)(  )  ( 
+${c2}(____)(____)(_)\_)(______)(_/\_)
 
 EOF
                 ;;

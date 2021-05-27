@@ -151,7 +151,7 @@ echo -e ""
 echo -e "${unterstrich}${green}How big is the repository?${reset}"
 echo -e "Likely infinitely large. You can create your own .blz packages very easy. "
 echo -e ""
-echo -e "BlackLinux 2021"
+echo -e "Blacklinux 2021"
 
 fi
 fi
