@@ -1,0 +1,7 @@
+{
+    "distro.name":      "BlackLinux",
+    "version":          1.4,
+    "distro.based":     "ubuntu2004",
+    "pretty.name":      "BlackLinux 1.4 LTS",
+    "LTS":              true
+}

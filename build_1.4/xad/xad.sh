@@ -1,0 +1,160 @@
+#!/bin/bash
+
+# Variablen für die Farben
+
+black=$(echo -e '\e[30m')
+red=$(echo -e '\e[31m')
+green=$(echo -e '\e[32m')
+brown=$(echo -e '\e[33m')
+blue=$(echo -e '\e[34m')
+purple=$(echo -e '\e[35m')
+cyan=$(echo -e '\033[1m\e[36m')
+yellow=$(echo -e '\e[1;33m')
+white=$(echo -e '\e[1;37m')
+dark_gray=$(echo -e '\e[1;30m')
+light_red=$(echo -e '\e[1;31m')
+light_green=$(echo -e '\e[1;32m')
+light_blue=$(echo -e '\e[1;34m')
+light_purple=$(echo -e '\e[1;35m')
+light_cyan=$(echo -e '\e[1;36m')
+light_gray=$(echo -e '\e[37m')
+orange=$(echo -e '\e[38;5;202m')
+light_orange=$(echo -e '\e[38;5;214m')
+bold=$(echo -e '\033[1m')
+reset=$(echo -e '\033(B\033[m')
+unterstrich=$(echo -e '\033[4m')
+
+# Add Packages
+
+if [[ $1 = "-a" ]]; then
+
+if [ "$EUID" -ne 0 ]
+then
+echo "${red}ERROR:${reset} You're not root! Use sudo xad <command>"
+exit
+fi
+
+
+echo -e "[$red#$reset] Getting Package Meta-Data..."
+sleep 0.5s
+echo -e "[$green#$reset] Getted!"
+sleep 1.32s
+echo -e "[$yellow#$reset] Installing Package..."
+sleep 1.422s
+cd /root || return
+cd xad-temp/ || return
+unzip ${2}
+chmod +x *
+cp * /usr/bin/
+rm /root/xad-temp/*
+
+# Remove Packages
+
+else
+if [[ $1 = "-d" ]]; then
+
+if [ "$EUID" -ne 0 ]
+then
+echo "${red}ERROR:${reset} You're not root! Use sudo xad <command>"
+exit
+fi
+
+echo -e "[$red*$reset] Removing Package..."
+sleep 1.422s
+cd /root/xad-files/ || return
+sleep 3
+echo "Could not remove Package."
+
+else 
+
+# Setting up
+
+if [[ $1 = "-s" ]]; then
+
+if [ "$EUID" -ne 0 ]
+then
+echo "${red}ERROR:${reset} You're not root! Use sudo xad <command>"
+exit
+fi
+
+if [ -d "/root/xad-temp" ]; then
+    echo "The directory xad-files already exists. If you want to set up xad again, please run sudo rm -r /root/xad-files/."
+    exit
+    return
+fi
+
+echo -e "Setting up Xad"
+echo -e "Log:
+~$ cd /root/"
+sleep 1
+echo -e "~$ mkdir xad-temp"
+sleep 1.4
+echo -e "~$ mkdir xad-files"
+
+cd /root/ || return
+mkdir xad-temp
+mkdir xad-files
+
+else
+
+if [[ $1 = "--v" ]]; then
+echo -e "Version: build-0.45.2"
+
+else
+if [[ $1 = "-uG" ]]; then
+
+if [ "$EUID" -ne 0 ]
+then
+echo "${red}ERROR:${reset} You're not root! Use sudo xad <command>"
+exit
+fi
+
+
+echo -e "[$red#$reset] Getting Update-Data..."
+sleep 0.9s
+echo -e "[$green#$reset] Getted!"
+sleep 1.56s
+echo -e "[$yellow#$reset] Installing Package-Update..."
+sleep 2.622s
+cd /root || return
+cd xad-temp/ || return
+unzip ${2}
+chmod +x *
+cp * /usr/bin/
+rm /root/xad-temp/*
+sleep 2.542s
+echo -e "[$yellow!$reset] Warning! Xad could not get the Update-List! This may be because of a bug"
+sleep 0.433s
+echo -e "[$yellow?$reset] Would you like to report the Bug? [Yes/No]:"
+read report
+sleep 0.5
+echo -e "[$green#$reset] Package was updated!"
+
+
+else
+echo -e "${red}Xad-Package Manager - A lightweight Package Manager${reset}"
+echo -e "***************************************************"
+sleep 0.01
+echo -e "xad -a <tar.blz>: Installs the given tar-package"
+echo -e "xad -d <package-name>: removes the specified package (BETA)"
+echo -e "xad -uG <tar.blz>: Updates the given tar-package"
+echo -e "xad --v: Shows you the currently installed Xad Version"
+echo -e ""
+echo -e "${unterstrich}${red}Where can I use Xad?${reset}"
+echo -e "Xad can currently be used on BlackLinux, Debian 9 or higher and Ubuntu 20.04 or higher"
+echo -e "You're need Bash-5 or higher to run Xad. Otherwise Xad cannot install the packages!"
+echo -e ""
+echo -e "${unterstrich}${cyan}More informations about Xad!${reset}"
+echo -e "xad-version: build-0.45.2"
+echo -e "${red}Important!${reset} To install, remove, or update a package, you need sudo permissons"
+echo -e ""
+echo -e "${unterstrich}${green}How big is the repository?${reset}"
+echo -e "Likely infinitely large. You can create your own .blz packages very easy. "
+echo -e ""
+echo -e "BlackLinux 2021"
+
+fi
+fi
+fi
+fi
+fi
