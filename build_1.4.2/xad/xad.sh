@@ -23,6 +23,7 @@ light_orange=$(echo -e '\e[38;5;214m')
 bold=$(echo -e '\033[1m')
 reset=$(echo -e '\033(B\033[m')
 unterstrich=$(echo -e '\033[4m')
+xad_version="0.46"
 
 
 # Add Packages
@@ -98,11 +99,12 @@ cd /usr/xad/ || return
 mkdir cache
 mkdir files
 touch mirrorlist.xad
+apt install git zip unzip wget -y
 
 else
 
 if [[ $1 = "-v" ]]; then
-echo -e "Version: build-0.45.2"
+echo -e "Version: build-${xad_version}"
 
 else
 if [[ $1 = "-uG" ]]; then
@@ -144,8 +146,8 @@ echo "${red}ERROR:${reset} You're not root! Use sudo xad <command>"
 exit
 fi
 
-cp "/mnt/d/Blacklinux/BlackLinux Shell/build_1.4/xad/xad.sh" "/usr/xad/"
-echo -e "update.exec"
+cp "/mnt/c/Users/Julian/Desktop/Div/Blacklinux/BlackLinux Shell/build_1.4.1/xad/xad.sh" "/usr/xad/"
+echo -e "[Log] Xad was updated"
 
 
 else
@@ -182,9 +184,9 @@ else
 echo -e "${red}Xad-Package Manager - A lightweight Package Manager${reset}"
 echo -e "***************************************************"
 sleep 0.01
-echo -e "xad -a <tar.blz>: Installs the given tar-package"
+echo -e "xad -a <blb>: Installs the given Blacklinux-Bundle"
 echo -e "xad -d <package-name>: removes the specified package (BETA)"
-echo -e "xad -uG <tar.blz>: Updates the given tar-package"
+echo -e "xad -uG <blb>: Updates the given Blacklinux-Bundle"
 echo -e "xad -v: Shows you the currently installed Xad Version"
 echo -e "xad -S: Setting up Xad"
 echo -e "xad -rS: Syncing Xad Repository"
@@ -195,13 +197,13 @@ echo -e "Xad can currently be used on BlackLinux, Debian 9 or higher and Ubuntu 
 echo -e "You're need Bash-5 or higher to run Xad. Otherwise Xad cannot install the packages!"
 echo -e ""
 echo -e "${unterstrich}${cyan}More informations about Xad!${reset}"
-echo -e "xad-version: build-0.45.2"
+echo -e "xad-version: build-${xad_version}"
 echo -e "${red}Important!${reset} To install, remove, or update a package, you need sudo permissons"
 echo -e ""
 echo -e "${unterstrich}${green}How big is the repository?${reset}"
-echo -e "Likely infinitely large. You can create your own tar.blz packages very easy. "
+echo -e "Likely infinitely large. You can create your own Blacklinux Bundles (in short blb) very easy. "
 echo -e ""
-echo -e "BlackLinux 2021"
+echo -e "Blacklinux Distrobution - All rights reserved"
 
 fi
 fi

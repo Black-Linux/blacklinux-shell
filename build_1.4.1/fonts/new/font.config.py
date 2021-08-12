@@ -1,0 +1,16 @@
+colorBlue = "\033[1m\033[36m"
+colorWhite = "\033[37m"
+colorReset = "\033(B\033[m"
+colorResetCommand = "$(echo -e '\033(B\033[m')"
+BashPath = "/bin/bash"
+ShLogoPath = "D:\anderes\Gesichert\logo.sh"
+
+asciiArt1 = " ____  __      __    ___  _  _  "
+asciiArt2 = "(  _ \(  )    /__\  / __)( )/ ) "
+asciiArt3 = " ) _ < )(__  /(__)\( (__  )  (  "
+asciiArt4 = "(____/(____)(__)(__)\___)(_)\_) "
+
+asciiArt5 = " __    ____  _  _  __  __  _  _ "
+asciiArt6 = "(  )  (_  _)( \( )(  )(  )( \/ )"
+asciiArt7 = " )(__  _)(_  )  (  )(__)(  )  ( "
+asciiArt8 = "(____)(____)(_)\_)(______)(_/\_)"

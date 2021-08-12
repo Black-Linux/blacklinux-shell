@@ -1,0 +1,5 @@
+echo "Please wait while loading Dempean..."
+sleep 2
+clear
+exec /usr/bin/dempean de
+

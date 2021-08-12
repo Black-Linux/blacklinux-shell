@@ -1,0 +1,150 @@
+#!/bin/bash
+
+#   *********************************************
+#   * I: This is only for Bash-Shells           *
+#   * Whats that?                               *
+#   * This Script is an Linux-Desktop for the   *
+#   * Linux-Terminal (Bash Shell only)          *
+#   * We do not rewrite this for other Shells   *
+#   *********************************************
+
+# Colors
+
+#red=$(echo -e '\e[31m')
+#green=$(echo -e '\e[32m')
+#brown=$(echo -e '\e[33m')
+#blue=$(echo -e '\e[34m')
+#purple=$(echo -e '\e[35m')
+#cyan=$(echo -e "\033[1m\e[36m")
+#yellow=$(echo -e '\e[1;33m')
+#white=$(echo -e '\e[1;37m')
+#dark_gray=$(echo -e '\e[1;30m')
+#light_red=$(echo -e '\e[1;31m')
+#light_green=$(echo -e '\e[1;32m')
+#light_blue=$(echo -e '\e[1;34m')
+#light_purple=$(echo -e '\e[1;35m')
+#light_cyan=$(echo -e '\e[1;36m')
+#light_gray=$(echo -e '\e[37m')
+#orange=$(echo -e '\e[38;5;202m')
+#light_orange=$(echo -e '\e[38;5;214m')
+#bold=$(echo -e '\033[1m')
+reset=$(echo -e '\033(B\033[m')
+unterstrich=$(echo -e '\033[4m')
+
+# Shortcuts
+
+if [[ $1 = "run" ]]; then
+echo "Running Task ${2} >_"
+exec ${2}
+
+else
+if [[ $1 = "htop" ]]; then
+echo "Shortcut htop started.."
+exec htop
+
+# Software
+
+else
+if [[ $1 = "applications" ]] || [[ $1 = "appl" ]]; then
+echo "
+                                       Applications
+****************************************************************************************
+
+Get new Software: ~$ software
+Git: ~$ git [OPTION]
+Download Software: ~$ apt install [ARG]
+Systemmonitor: ~$ htop
+Run: ~$ run [ARG]
+neofetch: ~$ neofetch
+Settings: ~$ settings
+
+"
+else
+if [[ $1 = "software" ]]; then
+echo "
+                                    Get new Software
+****************************************************************************************
+Nothing seems like to see..."
+
+# Settings
+
+else
+if [[ $1 = "settings" ]]; then
+echo "
+System-Settings 
+****************************************************************************************
+Internet > inet | 
+                |
+No more Settings|
+"
+else
+if [[ $1 = "inet" ]]; then
+echo "
+Internet Settings
+****************************************************************************************
+Connected with: WSL2 Ethernet 
+
+${unterstrich}Avaible Connections${reset}"
+sleep 1.2
+
+echo "searching ..."
+sleep 2.1
+echo "
+1. TP-Link_F378 - Ethernet
+2. TP-Link_F378 - Wireless
+
+3. UPCD7B8F2B - Wireless
+
+${unterstrich}Internet Configurations${reset}
+Ethernet Adapter: Windows 10 WSL Ethernet Adapter
+"
+
+else
+if [[ $1 = "inet-con" ]]; then
+echo "Connecting now.."
+
+
+# Main Desktop
+
+else
+if [[ $1 = "de" ]]; then
+echo "
+Notifications | Applications | htop |                       Internet  $(date +%H:%M) - $(date +%d.%m.%Y)
+****************************************************************************************
+      ${unterstrich}Calender${reset}
+$(cal)
+
+${unterstrich}                    Edit-Source                    ${reset}
+******************Dempean-Source*******************
+
+#!/bin/bash
+
+#   *********************************************
+#   * I: This is only for Bash-Shells           *
+#   * Whats that?                               *
+#   * This Script is an Linux-Desktop for the   *
+#   * Linux-Terminal (Bash Shell only)          *
+#   * We do not rewrite this for other Shells   *
+#   *********************************************
+
+if [[ §1 = run ]]; then
+echo §{2} >_
+exec §{2}
+
+else
+if [[ §1 = htop ]]; then
+echo Shortcut htop started..
+exec htop
+
+****************************************************
+"
+sleep 10000s
+
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi

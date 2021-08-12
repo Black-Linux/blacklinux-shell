@@ -1,0 +1,32 @@
+{
+    "lts":
+    {
+        "name":         "Blacklinux",
+        "pretty_name":  "BlackLinux 1.4.1 Extended LTS",
+        "version_id":   "1.4.1",
+        "version":      "1.4.1 LTS",
+        "based":        "debian10",
+        "lts":          true
+    },
+
+    "rolling-release":
+    {
+        "name":         "Blacklinux",
+        "pretty_name":  "BlackLinux 1.4.1 Release",
+        "version_id":   "1.4.1",
+        "version":      "1.4.1 Release",
+        "based":        "debian11",
+        "lts":          false
+    },
+    
+    "server":
+    {
+        "name":         "Blacklinux",
+        "pretty_name":  "BlackLinux 1.4.1 Server",
+        "version_id":   "1.4.1",
+        "version":      "1.4.1 Server",
+        "based":        "debian11",
+        "lts":          true
+    }
+    
+}
